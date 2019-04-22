@@ -1,0 +1,26 @@
+
+<div class="wrapper">
+  
+  <h1>Connexion</h1>
+  <form [formGroup]="messageForm" (ngSubmit)="onSubmit($event)">
+
+    <h5 *ngIf="success">Your form is valid!</h5>
+
+    <label class="form-gr">
+      <input type="text"  formControlName="username" class="form-control username" placeholder="username">
+      <div *ngIf="submitted && messageForm.controls.username.errors" class="error">
+        <div *ngIf="messageForm.controls.username.errors.required">Your name is required</div>
+      </div>
+    </label>
+  
+    <label class="form-gr">
+      <input type="password" formControlName="password" class="form-control password" placeholder="password">
+      <div *ngIf="submitted && messageForm.controls.password.errors" class="error">
+        <div *ngIf="messageForm.controls.password.errors.required">A message is required</div>
+      </div>
+    </label>
+
+    <input type="submit" value="Se connecter"  class="cta btn btn-info">
+  
+  </form>
+</div>

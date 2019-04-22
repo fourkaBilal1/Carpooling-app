@@ -1,0 +1,38 @@
+
+
+<div class="main">
+  <div class="wrapper">
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+      <div class="form-row align-items-center">
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInput">Name</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div>
+            <input type="text" formControlName="depart" class="form-control mb" id="inlineFormInputGroup" placeholder="depart">
+          </div>
+        </div>
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInputGroup">Username</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div>
+            <input type="text" formControlName="arrive" class="form-control mb" id="inlineFormInputGroup" placeholder="arrivee">
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="input-group mb-2">
+            <div class="dates">
+                    <input type="text" class="form-control" id="usr1" name="event_date" placeholder="YYYY-MM-DD" autocomplete="off" >
+            </div>
+          </div>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-2">Proposer un trajet</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

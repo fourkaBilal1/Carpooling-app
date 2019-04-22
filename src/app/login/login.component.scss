@@ -1,0 +1,29 @@
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 562px;
+    margin-top: 60px;
+    padding-left: 24px;
+    padding-right: 24px;
+    h1{
+        text-align: center;
+        font-family: 'Montserrat 400', sans-serif;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: #054752;
+        margin-bottom: 40px;
+    }
+    form{
+        display: grid;
+        .form-gr{
+            height: 60px;;
+            
+        }
+        .cta{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 50%;
+        }
+    }
+}

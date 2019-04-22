@@ -1,0 +1,96 @@
+.clearfix {
+    overflow: fixed;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .menu{
+      display: inline-block;
+      margin: 0;
+      height: 55px;
+      width: 100%;
+    .lineo{
+        position: absolute;
+        margin-top: 60px;
+        margin-left: -10px;
+        height: 1px;
+        width: 1400px;
+        background: #20B2AA;
+    }
+      .logo{
+          float: left;
+          margin: auto;
+          width: 0%;
+          margin-top: 7px;
+          margin-bottom: 3px;
+          img{
+              float: left;
+              width: 120px;
+              height: 100%;
+          }
+          span {
+            margin-left: 130px;
+            position: absolute;
+            display: block;
+            height: 50px;
+            width: 1px;
+            background: #20B2AA;
+          }
+      }
+      .tabm {
+          float: right;
+          margin: auto;
+          ul{
+              list-style: none;
+              font-family: "Acme";
+              color: #20B2AA;
+              font-size: 1.2em;
+              margin: .3em 2em 0 0;
+              @media screen and (max-width: 700px) {
+                font-size: 1.1em;
+              }
+              @media screen and (max-width: 630px) {
+                margin-top: 16px; 
+                font-size: 0.6em;
+              }
+               
+  
+              li{  
+                  a{
+                      color: #20B2AA;
+                      margin-left:3px; 
+                      text-decoration: none;
+                      transition: all .3s ease-in-out;
+                      &:hover{
+                          color:#10827A;
+                          transform: scale(1.1);
+                      }
+                  }
+                  float:left; 
+                  display:block; 
+                  text-align: center;
+                  margin: .2em .5em;
+                  padding: .3em .3em;
+              }
+              .connect{
+                  color:#fff;
+                  background-color: #F13C3C;
+                  border: #20B2AA solid 2px;
+                  border-radius: 60px;
+                  a{
+                      color: #fff;
+                  }
+                  &:hover{
+                      border-color: red;
+                      color: #20B2AA;
+                      a{
+                          color: #20B2AA;
+                      }
+                      background-color: #fff;
+                  }
+              }
+          }
+      }
+  }

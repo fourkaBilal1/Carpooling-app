@@ -1,0 +1,23 @@
+.main {
+	height:550px;
+	background: url('../../assets/images/theme.jpg') center center no-repeat;
+	background-size: cover;
+	// background-image: linear-gradient(to bottom right, #20B2AA,white);
+	.wrapper{
+		padding-top: 60px;
+		text-align: center;
+		form{
+			background-color: rgba(1,1,1,0.4);
+			padding: 10px 10px 4px 10px;
+			display: inline-block;
+			border-radius: 2px;
+			.dates{
+                color:#2471a3;
+                input{
+                    background-color:#aed6f1;
+                }
+            }
+		}
+
+	}
+}
