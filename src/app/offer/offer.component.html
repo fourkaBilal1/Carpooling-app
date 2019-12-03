@@ -1,0 +1,46 @@
+<link href="//cdn.syncfusion.com/ej2/fabric.css" rel="stylesheet" />
+<form (submit)="ProposerTrajet($event)">
+    <h1>PROPOSER UN COVOITURAGE</h1>
+    <div class="form-group">
+      <label for="exampleInput">Adresse de depart</label>
+      <input type="text" class="form-control" id="from" aria-describedby="emailHelp" placeholder="From">
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Adresse destination</label>
+      <input type="text" class="form-control" id="to" placeholder="To">
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Nombre de places</label>
+      <input type="number" class="form-control" id="nbPl" placeholder="ex: 2">
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Prix</label>
+      <input type="number" class="form-control" id="prix" placeholder="ex: 20 dh">
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Date and time</label>
+      <div id="container">
+        <input id="datetimepicker" type="text">
+      </div>
+      <style>
+        #container {
+          max-width: 260px;
+          margin: 0 auto;
+        }
+      
+        .e-input-group .e-input-group-icon,
+        .e-input-group.e-control-wrapper .e-input-group-icon,
+        .e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:hover {
+          background: none;
+        }
+      
+        .e-input-group:not(.e-disabled) .e-input-group-icon:active,
+        .e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:active {
+          background: rgb(0, 120, 214);
+        }
+      </style>
+      
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Proposer</button>
+  </form>

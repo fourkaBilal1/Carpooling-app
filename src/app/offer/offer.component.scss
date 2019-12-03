@@ -1,0 +1,18 @@
+form {
+	width: 30%;
+	height: 100%;
+	margin: 0 auto;
+	margin-top: 2em;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	h1{
+        text-align: center;
+        font-family: 'Montserrat 400', sans-serif;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: #054752;
+        margin-bottom: 40px;
+    }
+}

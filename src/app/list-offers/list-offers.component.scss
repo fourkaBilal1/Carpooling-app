@@ -1,0 +1,85 @@
+.cont{
+    width: 50%;
+    margin: auto;
+    h2{
+        display: block;
+        text-align: center;
+        font-family: 'Montserrat 400', sans-serif;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: #054752;
+        margin: 10px 0;
+    }
+    .container{
+        .mainList{
+            list-style: none;
+            display: block;
+            margin: 10px 0;
+            .oneItem{
+                width: 540px;
+                height: 191px;
+                background-color: #20B2AA;
+                border-radius: 30px;
+                margin-bottom: 20px;
+                a{
+                    display: block;
+                    width: 520px;
+                    height: 169px;
+                    padding: 10px;
+                    
+                    text-decoration: none;
+                    color:white;
+                    &:hover{
+                        color:white;
+                    }
+                    .upper{
+                        
+                        ul{
+                            list-style: none;
+                            display:inline-block;
+                            .wrapper{
+                                margin: 0;
+                                time{
+                                    display: block;
+                                    margin: 0;
+                                    padding: 10px 0;
+                                }
+                                .location_city{
+                                    display: block;
+                                    padding: 7px 0;
+                                    margin: 0;
+                                    .nb{
+                                        margin: 0;
+                                        padding: 10px 0;
+                                    }
+                                }
+                            }
+                            li{
+                                text-decoration: none;
+                                float: left;
+                                padding: 0 30px;
+                            }
+                        }
+                        .prix{
+                            float: right;
+                            padding: 10px 20px;
+                        }
+                    }
+                    .lower{
+                        display: block;
+                        margin:0;
+                        margin-left: 60px;
+                        button{
+                            float: right;
+                            margin-right: 10px;
+                        }
+                        .img{
+                            float: left;
+                            margin-right: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

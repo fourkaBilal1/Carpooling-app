@@ -1,0 +1,70 @@
+<div class="cont">
+  <h2>Liste des offres</h2>
+  <div class="container">
+      <ul class="mainList" *ngFor="let user of list">
+          
+          <li class="oneItem"  *ngFor="let offer of user.offers">
+            <a   >
+              <div class="upper">
+                <ul>
+                  <li>
+                    <div class="wrapper">
+                      <time>
+                        <span>{{ offer.Etat }}</span>
+                      </time>
+                      <div class="location_city">
+                        <span class="ct">{{ offer.From }}</span>
+                        <div class="nb">3</div>
+                      </div>
+                    </div>   
+                  </li>
+                  <li>
+                      <div class="wrapper">
+                          <time>
+                            <span>{{offer.Etat}}</span>
+                          </time>
+                          <div class="location_city">
+                            <span>{{ offer.To }}</span>
+                            <div class="nb">3</div>
+                          </div>
+                        </div>   
+                  </li>
+                </ul>
+                <span class="prix">{{ offer.Prix }} Dhs</span>
+              </div>
+              <div class="lower">
+                  <div class="img">
+                    <!--<img src="" alt="">-->
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <span>{{ user.nom }}  {{ user.prenom}}  {{ user.email}}</span>
+                  <button type="button" class="btn btn-danger" (click)="Reserver($event,user.email,offer._id)">Reserver</button>
+              </div>
+
+            </a>
+        
+          </li>
+        </ul>
+  </div>
+</div>
+
+
+
+
+
+
+<div *ngFor="let user of list">
+  <h5>{{user.email}}</h5>
+  <table>
+    <thead>
+    <th>From</th>
+    <th>To</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let offer of user.offers">
+        <td>{{offer.From}}</td>
+        <td>{{offer.To}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

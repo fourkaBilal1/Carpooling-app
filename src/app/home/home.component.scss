@@ -1,23 +1,30 @@
-.main {
-	height:550px;
-	background: url('../../assets/images/theme.jpg') center center no-repeat;
-	background-size: cover;
-	// background-image: linear-gradient(to bottom right, #20B2AA,white);
-	.wrapper{
-		padding-top: 60px;
-		text-align: center;
-		form{
-			background-color: rgba(1,1,1,0.4);
-			padding: 10px 10px 4px 10px;
-			display: inline-block;
-			border-radius: 2px;
-			.dates{
-                color:#2471a3;
-                input{
-                    background-color:#aed6f1;
-                }
-            }
-		}
 
+.sec{
+	height: 95vh;
+	width: 100%;
+	margin-top:-60px; 
+	background-image: url(../../assets/img/01.jpg);
+	background-size: cover;
+	padding: 90px 0px;
+	margin-right: 0;
+	color: rgb(185, 40, 40);
+	text-align: center;
+	.containers{
+		
+		margin-top: 54vh;
+		
+		width: 90vw;
+		padding: 0px 0 30px 0;
+		display: inline-block;
+		background-color: rgba(255, 255, 255, 0.9);
+		box-shadow: 
+			0px 0px 20px 80px rgba(255, 255, 255, 0.3),
+			0px 0px 40px 80px rgba(255, 255, 255, 0.4),
+			0px 0px 60px 80px rgba(255, 255, 255, 0.5),
+			0px 0px 80px 80px rgba(255, 255, 255, 0.6)
+	 ; 
+		h3{
+			color: rgb(8, 16, 17);
+		}
 	}
 }

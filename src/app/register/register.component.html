@@ -1,3 +1,58 @@
-<p>
-  register works!
-</p>
+<div class="wrapper">
+  
+  <h1>Inscription</h1>
+  <form (submit)="registerUser($event)">
+    
+    <div class="row">
+        <div class="form-group col">
+            <input type="text" class="form-control" id="nom" placeholder="Nom">
+        </div>
+        <div class="form-group col">
+            <input type="text" class="form-control" id="prenom" placeholder="Prenom">
+        </div>
+    </div>
+    
+    <div class="form-group">
+      <input type="text" class="form-control" id="email"  placeholder="Entrez votre email">
+    </div>
+    <div class="row">
+        <div class="form-group col">
+            <input type="text" class="form-control" id="age" placeholder="Age">
+          </div>
+          <div class="form-group col">
+            <input type="text" class="form-control" id="tel" placeholder="Tel">
+          </div>
+
+    </div>
+
+    
+    <div class="form-group">
+      <select class="form-control" id="sexe">
+        <option>Femme</option>
+        <option>Homme</option>
+
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="cpassword" placeholder="Confirmez votre mot de passe">
+    </div>
+    <div>
+      <input (change)="checked($event)" type="checkbox" id="cond" name="cond">
+      <label for="cond">Conducteur</label>
+    </div>
+    <div *ngIf="ToDisplay" class="form-group conducteur">
+      <input type="text" class="form-control form-group" id="car" placeholder="Description de la voiture">
+      <div class="row">
+          <input type="number" class="form-control form-group col" id="car_places" placeholder="Capacité de la voiture">
+          <input type="text" class="form-control form-group col" id="car_mat" placeholder="La matricule de la voiture">
+      </div>
+
+      
+    </div>
+    
+    <button type="submit" id="submit" class="btn btn-primary">S'inscrire</button>
+  </form>
+</div>

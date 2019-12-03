@@ -1,16 +1,16 @@
 
 <!-- top bar-->
-<div class="menu clearfix">
+<div class="menu clearfix shadow-lg p-3 mb-5 bg-white rounded">
   <div class="logo">
     <img src="..\..\assets\images\dinim3ak2.png">
     <span></span>
   </div>
-  <div class="tabm">
+  <div class="tabm ">
     <ul>
-      <li><a href="#" routerLink="/"><i class="fab fa-autoprefixer"></i> ccueil</a></li>
-      <li><a href="#"><i class="fas fa-id-badge"></i> Contact</a></li>
-      <li><a href="#" routerLink="/register"><i class="fas fa-plus-circle"></i> Inscription</a></li>
-      <li class="connect" ><a href="#" routerLink="/login"><i class="fas fa-user-circle"></i> Connexion</a></li>
+      <li><a href="#" routerLink="/"><i class="fab fa-autoprefixer"></i> ccueil   </a></li>
+      <li><a href="#" routerLink="/"><i class="fas fa-id-badge"></i> Contact</a></li>
+      <li><a href="#" (click)="InscriptionRouteTo($event)"><i class="fas fa-plus-circle"></i> {{InscriptionButton}}</a></li>
+      <li class="connect" ><a href="#" (click)="ConnexionRouteTo($event)"><i class="fas fa-user-circle"></i> {{redButton}}</a></li>
     </ul>
   </div>
   <span class="lineo"></span>

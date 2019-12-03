@@ -1,0 +1,70 @@
+<div id="message">{{quote}}  {{email}} <a routerLink="/logout" class="button">Logout</a></div>
+
+
+<h1>Vos Offres</h1>
+<div *ngFor="let item of listO" class="tableau table-responsive-md"> <!--*ngFor="let user of list" -->
+    <h5>Offre de 
+        <div class="red" style="color: rgb(1, 134, 134);  display: inline-block;">{{item.offer["From"]}}</div>
+        vers 
+        <div class="red" style="color: rgb(1, 134, 134);  display: inline-block;">{{item.offer.To}}</div>
+        le 
+        <div class="red" style="color: red;  display: inline-block;">{{item.offer.DateOffer | date : 'yyyy-MM-dd' }}</div>
+        A  
+        <div class="red" style="color: red; display: inline-block;">{{item.offer.DateOffer | date:'shortTime'  }}</div>
+        <button class="btn btn-primary" style="float: right;">Annuler l'offre</button>
+    </h5>
+    
+    <table class="table" style="text-align: center;">
+        <thead>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>email</th>
+            <th>age</th>
+            <th>sexe</th>
+            <th>tel</th>
+            <th>reponse</th>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let demander of item.demanders" >
+                <td>{{ demander.nom }}</td>
+                <td>{{ demander.prenom }}</td>
+                <td>{{ demander.email }} </td>
+                <td>{{ demander.age }}</td>
+                <td>{{ demander.sexe }}</td>
+                <td>{{ demander.tel }}</td>
+                <td > <button class="btn btn-info" style="margin:5px 13px;">Accepter</button> <button class="btn btn-danger" style="margin:5px 0;">Refuser</button></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3 *ngIf="listO.length === 0" style="text-align: center;">Aucune Offre enregistrée </h3>
+<h1>Vos Demandes</h1>
+<div *ngIf="listD.length != 0"  class="tableau table-responsive-md"> <!--*ngFor="let user of list" -->
+    <h5>
+    </h5>
+    
+    <table class="table" style="text-align: center;">
+        <thead>
+            <th>De</th>
+            <th>Vers</th>
+            <th>Date</th>
+            <th>Heure</th>
+            <th>Etat</th>
+            <th>Operation</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listD" >
+                <td>{{ item.From }}</td>
+                <td>{{ item.To }}</td>
+                <td>{{ item.DateDem | date : 'yyyy-MM-dd' }}</td>
+                <td>{{ item.DateDem | date : 'shortTime' }}</td>
+                <td>{{ item.Etat }}</td>
+                <td > <button class="btn btn-dark" style="margin:5px 0;">Annuler la demande</button></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3 *ngIf="listD.length === 0" style="text-align: center;">Aucune Demande enregistrée</h3>

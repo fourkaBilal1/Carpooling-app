@@ -7,16 +7,20 @@
     display: block;
   }
   .menu{
+        
       display: inline-block;
       margin: 0;
-      height: 55px;
+      height: 75px;
       width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      
     .lineo{
         position: absolute;
-        margin-top: 60px;
-        margin-left: -10px;
+        margin-top: 59px;
+        margin-left: -13px;
         height: 1px;
-        width: 1400px;
+        width: 99.5%;
         background: #20B2AA;
     }
       .logo{

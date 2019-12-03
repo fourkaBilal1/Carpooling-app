@@ -1,0 +1,45 @@
+<link href="//cdn.syncfusion.com/ej2/fabric.css" rel="stylesheet" />
+<div class="container">
+  <form (submit)="DemanderTrajet($event)">
+    <div class="wrapper">
+      <div class="form-group">
+        <label for="exampleInput">Adresse de départ</label>
+        <input type="text" class="form-control" id="from" aria-describedby="emailHelp" placeholder="From">
+      </div>
+      <div class="form-group">
+        <label for="exampleInput">Adresse de destination</label>
+        <input type="text" class="form-control" id="to" placeholder="To">
+      </div>
+      <div class="form-group">
+          <label for="exampleInput">Nombre de places demandé</label>
+          <input type="number" class="form-control" id="NbP" placeholder="par exemple 2">
+        </div>
+      <div class="form-group">
+        <label for="exampleInput">Date et heure</label>
+        <div id="container">
+          <input id="datetimepicker" type="text">
+        </div>
+        <style>
+          #container {
+            max-width: 260px;
+            margin: 0 auto;
+          }
+        
+          .e-input-group .e-input-group-icon,
+          .e-input-group.e-control-wrapper .e-input-group-icon,
+          .e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:hover {
+            background: none;
+          }
+        
+          .e-input-group:not(.e-disabled) .e-input-group-icon:active,
+          .e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:active {
+            background: rgb(0, 120, 214);
+          }
+        </style>
+        
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Demander</button>
+    </div>
+  </form>
+</div>

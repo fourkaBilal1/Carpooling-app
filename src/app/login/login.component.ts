@@ -1,47 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { APP_ROOT } from '@angular/core/src/di/scope';
+import { NavComponent } from '../nav/nav.component';
+import { Router } from '@angular/router';
 
+
+
+interface MyObj {
+  username: string;
+  password: number;
+  success:boolean;
+}
 @Component({
   selector: 'app-login',
+  providers:[NavComponent],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  messageForm: FormGroup;
-  submitted = false;
-  success = false;
 
-
-  constructor(private formBuilder: FormBuilder,private Auth : AuthService) {
+  constructor(private Auth: AuthService,
+              private router: Router,
+              private nav : NavComponent) {
   }
   ngOnInit() {
-    this.messageForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
   }
 
 
-  loginUser(event){
-    const target = event.target;
-    const username = target.querySelector('.username').value;
-    const password = target.querySelector('.password').value;
-    this.Auth.connect(username,password);
-    
-    
-    
-  }
-  onSubmit( event ) {
-    
-    this.submitted = true;
-
-    if (this.messageForm.invalid) {
-        return;
-    }
-    this.loginUser(event);
-    this.success = true;
+  loginUser(event) {
+    event.preventDefault()
+    const target = event.target
+    const email = target.querySelector('#email').value
+    const password = target.querySelector('#password').value
+    this.Auth.getUserDetails(email, password).subscribe(data => {
+      if(data.success) {
+        this.nav.changeButton()
+        this.router.navigate(['dashboard']).then(f=>{
+          window.location.reload()})
+        this.Auth.setLoggedIn(true)
+      } else {
+        window.alert(data.message)
+      }
+    })
   }
 
 }
